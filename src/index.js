@@ -8,7 +8,7 @@ import { history } from "./history";
 import SongList from "./components/SongList";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000"
+  uri: "http://localhost:4000/graphql"
 });
 
 const Root = () => {
