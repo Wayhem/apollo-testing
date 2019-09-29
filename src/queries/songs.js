@@ -25,3 +25,12 @@ export const DELETE_SONG = gql`
     }
   }
 `;
+
+export const SONG = gql`
+  query SongQuery($id: ID!) {
+    song(id: $id) {
+      id
+      title
+    }
+  }
+`;

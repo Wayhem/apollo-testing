@@ -20,7 +20,7 @@ const SongList = () => {
   const renderSongs = () =>
     _.map(songs, ({ title, id }) => (
       <li className="collection-item" key={id}>
-        {title}
+        <div onClick={() => history.push(`/songs/${id}`)}>{title}</div>
         <i className="material-icons" onClick={() => onSongDelete(id)}>
           delete
         </i>

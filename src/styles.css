@@ -3,6 +3,10 @@
   justify-content: space-between;
 }
 
+.collection-item div {
+  cursor: pointer;
+}
+
 .material-icons {
   cursor: pointer;
 }
