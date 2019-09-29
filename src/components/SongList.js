@@ -1,16 +1,8 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
-import { gql } from "apollo-boost";
 import _ from "lodash";
-
-const SONG_LIST = gql`
-  {
-    songs {
-      title
-      id
-    }
-  }
-`;
+import { history } from "../history";
+import { SONG_LIST } from "../queries/songs";
 
 const SongList = () => {
   const { loading, error, data } = useQuery(SONG_LIST);
@@ -21,9 +13,23 @@ const SongList = () => {
   const { songs = [] } = data;
 
   const renderSongs = () =>
-    _.map(songs, ({ title, id }) => <li key={id}>{title}</li>);
+    _.map(songs, ({ title, id }) => (
+      <li className="collection-item" key={id}>
+        {title}
+      </li>
+    ));
 
-  return <>{renderSongs()}</>;
+  return (
+    <>
+      <ul className="collection">{renderSongs()}</ul>
+      <button
+        className="btn-floating btn-large red light"
+        onClick={() => history.push("/songs/new")}
+      >
+        <i className="material-icons">add</i>
+      </button>
+    </>
+  );
 };
 
 export default SongList;
