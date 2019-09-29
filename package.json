@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.1",
+    "apollo-boost": "^0.4.4",
+    "dotenv": "^8.1.0",
+    "graphql": "^14.5.8",
+    "lodash": "^4.17.15",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "react-scripts": "3.1.2"
+    "react-router": "^5.1.1",
+    "react-scripts": "3.1.2",
+    "styled-components": "^4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
