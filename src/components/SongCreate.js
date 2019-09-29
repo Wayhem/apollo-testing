@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/react-hooks";
-import { withRouter } from "react-router";
 import { ADD_SONG, SONG_LIST } from "../queries/songs";
 
 const SongCreate = ({ history }) => {
@@ -37,4 +36,4 @@ const SongCreate = ({ history }) => {
   );
 };
 
-export default withRouter(SongCreate);
+export default SongCreate;
